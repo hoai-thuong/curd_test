@@ -1,6 +1,5 @@
 <?php
 session_start();
-//require "/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/index.php";
 require_once __DIR__ . '/../../../index.php';
 
 
