@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../../../index.php';
 ?>
- <html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"

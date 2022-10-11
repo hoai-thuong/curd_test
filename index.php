@@ -1,15 +1,19 @@
 <?php
-require_once '/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/vendor/autoload.php';
-require_once '/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/config/DB.php';
+require_once __DIR__ . '/config/DB.php';
+
 use App\Controllers\LoginController;
 use App\Controllers\LogoutController;
 use App\Controllers\ProductController;
 use App\Controllers\RegisterController;
+
 $registerController = new RegisterController();
 $logoutController = new LogoutController();
 $loginController = new LoginController();
 $productController = new ProductController();
 $loginController->login();
 $registerController->register();
-$productController->getLimited();
+$product_data = $productController->getLimited();
+$show_data = $productController->show();
+
+
 

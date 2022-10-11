@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 class Auth extends BaseModel
 {
@@ -13,11 +14,13 @@ class Auth extends BaseModel
         $userData = $this->DB->execute($userSpl, $dataCheck);
         return $userData;
     }
+
     public function login ($name, $password)
     {
         return (count($this->getUser($name, $password)) > 0 && $_SESSION['username'] = $name);
 
     }
+
     public function register ($name)  //names vaf passwords la cai nhap vao
     {
         $userspl = "SELECT name FROM users WHERE name = :name";

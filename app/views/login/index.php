@@ -1,6 +1,9 @@
 <?php
 session_start();
-require "/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/index.php";
+//require "/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/index.php";
+require_once __DIR__ . '/../../../index.php';
+
+
 if (isset($_SESSION['username'])) {
     header("Location: ../home/index.php");
 } else {
@@ -48,7 +51,8 @@ if (isset($_SESSION['username'])) {
         <div class="aitssendbuttonw3ls">
 
             <input type="submit" name="login" value="LOGIN">
-            <p> To register new account <span>→</span> <a class="w3_play_icon1" href="../register/index.php"> Click Here</a>
+            <p> To register new account <span>→</span> <a class="w3_play_icon1" href="../register/index.php"> Click
+                    Here</a>
             </p>
             <div class="clear"></div>
         </div>

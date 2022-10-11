@@ -1,11 +1,9 @@
 <?php
 session_start();
-require "/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/index.php";
-if(!isset($_SESSION['username'])) {
+require_once __DIR__ . '/../../../index.php';
+if (!isset($_SESSION['username'])) {
     header("location: ../login/index.php");
 }
-$logoutController->index();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,12 +33,12 @@ $logoutController->index();
                 <li>
                     <form id="search" action="" method="get">
                         <input type="text" name="name" placeholder="Bạn tìm gì...">
-                        <input type="submit"  value="Tìm kiếm">
+                        <input type="submit" value="Tìm kiếm">
                         <?php if (isset($_GET['name'])) {
                             $keyword = $_GET['name'];
                             echo $keyword;
-                            header("Location: ../product/search.php?name=$keyword");
-                        }   ?>
+                            header("Location: ../products/search.php?name=$keyword");
+                        } ?>
 
                     </form>
 
@@ -694,9 +692,9 @@ $logoutController->index();
     </section>
     <!--        phân trang-->
     <?php
-    include "../product/detail_product.php";
-
+    include "../products/detail_product.php";
     ?>
+
 
 </main>
 <!-- footer section -->

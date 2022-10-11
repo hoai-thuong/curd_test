@@ -1,5 +1,5 @@
 <?php
-require "/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/index.php";
+require_once __DIR__ . '/../../../index.php';
 ?>
 <html lang="en">
 <head>
@@ -21,9 +21,10 @@ require "/Applications/XAMPP/xamppfiles/htdocs/CURD_TEST/index.php";
     <form method="post" action>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
-            <input type="text" name="name" class="form-control" required value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>" >
+            <input type="text" name="name" class="form-control" required
+                   value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>">
             <p class="text-danger">
-               <?php echo  $error_userExist; ?>
+                <?php echo $error_userExist; ?>
             </p>
         </div>
         <div class="mb-3">
